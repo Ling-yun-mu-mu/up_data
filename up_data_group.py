@@ -120,9 +120,9 @@ if __name__ == '__main__':
         print(login_data)
 
         req = requests.session()
-        req.post(login_url,headers=login_headers,data=login_data,proxies=proxies)
+        req.post(login_url,headers=login_headers,data=login_data)
 
-        res = req.get(imformation_url,headers=updata_headers,proxies=proxies)
+        res = req.get(imformation_url,headers=updata_headers)
         soup = BeautifulSoup(res.content.decode('utf-8'),'lxml')
 
         try:
@@ -130,7 +130,7 @@ if __name__ == '__main__':
             token_value = tokens.attrs['value']
             updata_data['ttoken'] = token_value
 
-            res = req.post(updata_url,headers=updata_headers,data=updata_data,proxies=proxies)
+            res = req.post(updata_url,headers=updata_headers,data=updata_data)
         except Exception as e:
             with open('log.txt','a') as f:
                 f.write(i['姓名']+'：失败 '+str(e))
