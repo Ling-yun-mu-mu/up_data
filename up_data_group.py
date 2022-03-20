@@ -8,7 +8,7 @@ import datetime
     #"http": 'http://118.190.244.234:3128'
     #"http": '152.136.62.181:9999'
 proxies = {
-    "http": '152.136.62.181:9999'
+    "http": '183.247.152.98:53281'
 }
 
 login_url = "http://yiqing.ctgu.edu.cn/wx/index/loginSubmit.do"
