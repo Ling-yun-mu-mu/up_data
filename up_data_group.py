@@ -6,9 +6,7 @@ import xlrd
 import datetime
 
 proxies = {
-   # "http": 'http://221.122.91.65:80'
-   #"http": 'http://88.147.110.221:80'
-   "http": 'http://36.57.70.225:8888'
+   "http": '42.194.232.51:8088'
 }
 
 login_url = "http://yiqing.ctgu.edu.cn/wx/index/loginSubmit.do"
